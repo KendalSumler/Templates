@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
+
 	system("pause");
-	return;
+	return 0;
 };
+

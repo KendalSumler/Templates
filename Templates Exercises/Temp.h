@@ -2,7 +2,8 @@
 /*Min
 DESCRIPTION : Returns the lower of two values.
 	INPUT : Two template arguments(a, b).
-	OUTPUT : The lower of the two values a and b.*/
+	OUTPUT : The lower of the two values a and b.*/
+
 template<typename K>
 K Min(K a, K b)
 {
@@ -53,5 +54,38 @@ DESCRIPTION : Constrains a value within the range of two other values.
  D Min(D a, D b)
  {
 
-	 return 0;
+	 return b;
  }
+
+ /*Max(specialised for char)
+	 DESCRIPTION: As above but first checks if a and b represent alphabetical characters.If so,
+	 the function will return the value that is alphabetically higher.
+	 INPUT : Two template arguments(a, b).
+	 OUTPUT : The alphabetically higher of the two values a and b.*/
+
+ template<typename L>
+ L Max(L a, L b)
+ {
+	 return a;
+ }
+
+/* Create a template class for storing any data - type.The data itself should be stored as a private
+	 pointer to an array on the heap.*/
+
+ template<class temp>
+ class T
+ {
+ private:
+	 temp* temptr;
+	 int index ;
+	 int size ;
+ public:
+	 Constructor(int a)
+	 {
+		 index = 0;
+		 size = 2;
+		temptr = new temp[size]
+	 }
+
+ };
+
