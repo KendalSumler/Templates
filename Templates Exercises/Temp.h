@@ -4,8 +4,8 @@ DESCRIPTION : Returns the lower of two values.
 	INPUT : Two template arguments(a, b).
 	OUTPUT : The lower of the two values a and b.*/
 
-template<typename K>
-K Min(K a, K b)
+template<typename T>
+T Min(T a, T b)
 {
 	return a < b;
 }
@@ -15,8 +15,8 @@ DESCRIPTION : Returns the higher of two values.
 	INPUT : Two template arguments(a, b).
 	OUTPUT : The higher of the two values a and b.*/
 
-template<typename E>
-E Max(E a, E b)
+template<typename T>
+T Max(T a, T b)
 {
 	return a > b;
 }
@@ -26,10 +26,10 @@ DESCRIPTION : Constrains a value within the range of two other values.
 	INPUT : Three template arguments(min, max, val).
 	OUTPUT : The value of the val constrained between min and max.*/
 
- template<typename N>
- N Clamp(N min, N max, N val)
+ template<typename T>
+ T Clamp(T min, T max, T val)
  {
-	 if (val < max && > min)
+	 if (val < max && val > min)
 	 {
 		 return val;
 	 }
@@ -50,8 +50,8 @@ DESCRIPTION : Constrains a value within the range of two other values.
 	 INPUT : Two template arguments(a, b).
 	 OUTPUT : The alphabetically lower of the two values a and b.*/
 
- template<typename D>
- D Min(D a, D b)
+ template<typename T>
+ T Min(T a, T b)
  {
 
 	 return b;
@@ -63,8 +63,8 @@ DESCRIPTION : Constrains a value within the range of two other values.
 	 INPUT : Two template arguments(a, b).
 	 OUTPUT : The alphabetically higher of the two values a and b.*/
 
- template<typename L>
- L Max(L a, L b)
+ template<typename T>
+ T Max(T a, T b)
  {
 	 return a;
  }
@@ -80,12 +80,32 @@ DESCRIPTION : Constrains a value within the range of two other values.
 	 int index ;
 	 int size ;
  public:
-	 Constructor(int a)
+
+	/* Creates an array on the heap of the specified capacity.The new heap
+		 memory should be zeroed using memset.You should store the value of
+		 capacity and size for later use(size should start at 0).
+		 INPUT : A single integer specifying the capacity for the data array.*/
+
+	 T Constructor(int a)
 	 {
 		 index = 0;
 		 size = 2;
-		temptr = new temp[size]
+		 temptr = new temp[size]
+			 return 0;
 	 }
 
+	 /*Deletes the data pointed to on the heap.*/
+
+	 T Deconstructor()
+	 {
+		 delete T;
+	 }
+	 
+	/*Adds an item to the next empty array location(you should be able to use the
+		 size value as an index to the next free location).Before adding the new item
+		 to the array, we should check if there is room and call Expand if not.
+		 INPUT: One template arguments(item).*/	 T add()	 {
+
+	 }
  };
 
